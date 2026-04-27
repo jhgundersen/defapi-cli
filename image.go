@@ -14,12 +14,7 @@ func (f *stringListFlag) String() string {
 }
 
 func (f *stringListFlag) Set(value string) error {
-	for _, item := range strings.Split(value, ",") {
-		item = strings.TrimSpace(item)
-		if item != "" {
-			*f = append(*f, item)
-		}
-	}
+	*f = append(*f, value)
 	return nil
 }
 
