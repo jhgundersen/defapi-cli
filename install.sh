@@ -13,9 +13,10 @@ case $ARCH in
   *) echo "Unsupported architecture: $ARCH" >&2; exit 1 ;;
 esac
 
-BIN_DIR="${HOME}/.local/bin"
-BASH_DIR="${HOME}/.local/share/bash-completion/completions"
-ZSH_DIR="${HOME}/.local/share/zsh/site-functions"
+PREFIX="${PREFIX:-$HOME/.local}"
+BIN_DIR="${PREFIX}/bin"
+BASH_DIR="${PREFIX}/share/bash-completion/completions"
+ZSH_DIR="${PREFIX}/share/zsh/site-functions"
 
 echo "Downloading ${BINARY} for ${OS}/${ARCH}..."
 mkdir -p "$BIN_DIR"
