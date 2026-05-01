@@ -283,7 +283,7 @@ func commonFlags(command string, args []string, defaultModel string, defaultStre
 }
 
 func cmdOpenAI(command string, args []string) {
-	opts := commonFlags(command, args, "openai/gpt-5.2", true)
+	opts := commonFlags(command, args, "openai/gpt-5.2", false)
 	key := apiKey()
 	w, done := outputWriter(opts.output)
 	defer done()
@@ -336,7 +336,7 @@ func cmdOpenAI(command string, args []string) {
 }
 
 func cmdClaude(command string, args []string) {
-	opts := commonFlags(command, args, "anthropic/claude-sonnet-4.6", true)
+	opts := commonFlags(command, args, "anthropic/claude-sonnet-4.6", false)
 	key := apiKey()
 	w, done := outputWriter(opts.output)
 	defer done()

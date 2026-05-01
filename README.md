@@ -44,8 +44,8 @@ defapi text gemini "Summarize this article" < article.txt
 
 | Model    | Provider  | Default                        |
 |----------|-----------|--------------------------------|
-| `gpt`    | OpenAI    | gpt-5.2 (streaming)            |
-| `claude` | Anthropic | claude-sonnet-4.6 (streaming)  |
+| `gpt`    | OpenAI    | gpt-5.2                        |
+| `claude` | Anthropic | claude-sonnet-4.6              |
 | `gemini` | Google    | gemini-3.1-pro-preview         |
 
 Common flags: `--model`, `--system`, `--stream`, `--max-tokens`, `--temperature`, `--top-p`, `--output/-o`
