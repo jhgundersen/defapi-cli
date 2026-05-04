@@ -76,7 +76,7 @@ func cmdWan(args []string) {
 		*output = outputArg
 	}
 
-	prompt := strings.Join(fs.Args(), " ")
+	prompt := promptFromArgs(fs.Args())
 	if prompt == "" {
 		fs.Usage()
 		os.Exit(1)
@@ -119,7 +119,7 @@ func cmdMidjourney(args []string) {
 		*output = outputArg
 	}
 
-	prompt := strings.Join(fs.Args(), " ")
+	prompt := promptFromArgs(fs.Args())
 	if prompt == "" {
 		fs.Usage()
 		os.Exit(1)
@@ -179,7 +179,7 @@ func cmdGPTImage(command string, args []string, defaultModel string) {
 		*output = outputArg
 	}
 
-	prompt := strings.Join(fs.Args(), " ")
+	prompt := promptFromArgs(fs.Args())
 	if prompt == "" {
 		fs.Usage()
 		os.Exit(1)
@@ -269,7 +269,7 @@ func cmdGoogle(args []string) {
 		*output = outputArg
 	}
 
-	prompt := strings.Join(fs.Args(), " ")
+	prompt := promptFromArgs(fs.Args())
 	if prompt == "" {
 		fs.Usage()
 		os.Exit(1)
